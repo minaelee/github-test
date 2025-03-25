@@ -17,6 +17,7 @@ body:
     id: ack_searched
     attributes:
       label: Acknowledgment
+      value: 
       description: Please confirm you have searched existing issues to check if one already exists for your bug.
       options:
         - label: I have searched existing issues to check if an issue already exists for the bug I encountered.
