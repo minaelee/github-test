@@ -20,8 +20,7 @@ body:
       description: Please confirm you have searched existing issues to check if one already exists for your bug.
       options:
         - label: I have searched existing issues to check if an issue already exists for the bug I encountered.
-    validations:
-      required: true
+          required: true
 
   - type: input
     id: distribution
