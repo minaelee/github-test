@@ -1,0 +1,65 @@
+name: Bug report
+description: Create a report to help us improve
+title: "bug: "
+labels: [bug]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Note**: GitHub issues are used for bug reports. For support questions, please use [our forum](https://discourse.ubuntu.com/c/lxd/).
+
+        Please fill the template below as it will greatly help us track down your issue and reproduce it on our side.  
+        Feel free to remove anything which doesn't apply to you and add more information where it makes sense.
+
+  - type: input
+    id: distribution
+    attributes:
+      label: Distribution
+      description: Which Linux distribution are you using?
+    validations:
+      required: true
+
+  - type: input
+    id: distro_version
+    attributes:
+      label: Distribution version
+    validations:
+      required: true
+
+  - type: textarea
+    id: snap_list
+    attributes:
+      label: Output of "snap list --all lxd core20 core22 core24 snapd"
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: lxc_info
+    attributes:
+      label: Output of "lxc info" or system info if it fails
+      description: If "lxc info" fails, please provide kernel, LXC, LXD versions, and storage backend.
+      placeholder: |
+        Kernel version:
+        LXC version:
+        LXD version:
+        Storage backend in use:
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue_description
+    attributes:
+      label: Issue description
+      description: What were you doing, what happened, and what did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Provide step-by
