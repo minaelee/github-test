@@ -13,6 +13,16 @@ body:
         Please fill out the template below to the best of your ability. It will greatly help us track down your issue and reproduce it on our side.  
         If a field does not apply to your issue, you can answer "n/a". Feel free to add more information where it makes sense.
 
+  - type: checkboxes
+    id: ack_searched
+    attributes:
+      label: Acknowledgment
+      description: Please confirm you have searched existing issues to check if one already exists for your bug.
+      options:
+        - label: I have searched existing issues to check if an issue already exists for the bug I encountered.
+    validations:
+      required: true
+
   - type: input
     id: distribution
     attributes:
