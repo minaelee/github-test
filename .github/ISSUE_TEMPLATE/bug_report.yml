@@ -10,8 +10,8 @@ body:
       value: |
         **Note**: GitHub issues are used for bug reports. For support questions, please use [our forum](https://discourse.ubuntu.com/c/lxd/).
 
-        Please fill the template below as it will greatly help us track down your issue and reproduce it on our side.  
-        Feel free to remove anything which doesn't apply to you and add more information where it makes sense.
+        Please fill out the template below to the best of your ability. It will greatly help us track down your issue and reproduce it on our side.  
+        If a field does not apply to your issue, you can answer "n/a". Feel free to add more information where it makes sense.
 
   - type: input
     id: distribution
@@ -41,11 +41,6 @@ body:
     attributes:
       label: Output of "lxc info" or system info if it fails
       description: If "lxc info" fails, please provide kernel, LXC, LXD versions, and storage backend.
-      placeholder: |
-        Kernel version:
-        LXC version:
-        LXD version:
-        Storage backend in use:
       render: shell
     validations:
       required: true
@@ -62,4 +57,23 @@ body:
     id: steps_to_reproduce
     attributes:
       label: Steps to reproduce
-      description: Provide step-by
+      description: Provide step-by-step instructions to reproduce the issue.
+      placeholder: |
+        1. Step one
+        2. Step two
+        3. Step three
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: attachments
+    attributes:
+      label: Information to attach
+      description: If you have any of the following information, please attach them as text files.
+      options:
+        - label: Any relevant kernel output (`dmesg`)
+        - label: Container log (`lxc info NAME --show-log`)
+        - label: Container configuration (`lxc config show NAME --expanded`)
+        - label: Main daemon log (at `/var/log/lxd/lxd.log` or `/var/snap/lxd/common/lxd/logs/lxd.log`)
+        - label: Output of the client with `--debug`
+        - label: Output of the daemon with `--debug` (or use `lxc monitor` while reproducing the issue)
