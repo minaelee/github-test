@@ -9,8 +9,9 @@ body:
       value: |
         **Note**: GitHub issues are used for bug reports. For support questions, please use [our forum](https://discourse.ubuntu.com/c/lxd/).
 
-        Please fill out the template below to the best of your ability. It will greatly help us track down your issue and reproduce it on our side.  
-        If a field does not apply to your issue, you can answer "n/a". Feel free to add more information where it makes sense.
+        Please fill out the fields below to the best of your ability. Doing so will help us track down and reproduce your bug. 
+        
+        If a field does not apply to your bug, you can answer "n/a". Feel free to add more information where it makes sense.
 
   - type: checkboxes
     id: ack_searched
